@@ -11,7 +11,8 @@ Installation
 $ docker -v
 $ docker-compose -v
 ```
-4. Input next commands in terminal:
+4. Add stripe public, secret and webhook keys in env.sample and rename it to .env
+5. Input next commands in terminal:
 ``` bash
 $ sudo docker-compose up —build
 $ sudo docker-compose run web python3 manage.py migrate
