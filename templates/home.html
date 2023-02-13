@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Buy cool new product</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://js.stripe.com/v3/"></script>
+  </head>
+  <body>
+    <section>
+      {% for item in items %}
+      <div class="product">
+        <div class="description">
+          <h3>{{ item.name }}</h3>
+          <h5>{{ item.description }}</h5>
+          <h5>${{ item.get_display_price }}</h5>
+          
+          <button type="button"><a href="item/{{ item.pk }}/">Посмотреть товар</a></button>
+        </div>
+      </div>
+      {% endfor %}
+    </section>
+    
+  </body>
+</html>
